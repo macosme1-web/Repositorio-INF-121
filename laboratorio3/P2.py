@@ -101,6 +101,6 @@ class Aplicacion:
         juego3 = JuegoAdivinaImpar(3)
         juego3.juega()
 
-# Ejecutar el main si este archivo es el principal
 if __name__ == "__main__":
     Aplicacion.main()
+
