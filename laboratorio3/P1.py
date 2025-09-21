@@ -34,7 +34,7 @@ class JuegoAdivinaNumero(Juego):
     def juega(self):
         self.reiniciaPartida()
         self.numeroAAdivinar = random.randint(0, 10)
-        # print(f"[DEBUG] Número a adivinar: {self.numeroAAdivinar}")  # Descomenta para ver el número (debug)
+        
 
         while True:
             try:
@@ -63,6 +63,7 @@ class Aplicacion:
         juego = JuegoAdivinaNumero(vidas)
         juego.juega()
 
-# Ejecutar el main si este archivo es el principal
+
 if __name__ == "__main__":
     Aplicacion.main()
+
