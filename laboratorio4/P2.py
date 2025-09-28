@@ -2,13 +2,11 @@ from abc import ABC, abstractmethod
 import random
 import math
 
-# Interfaz Coloreado
 class Coloreado(ABC):
     @abstractmethod
     def como_colorear(self) -> str:
         pass
 
-# Clase abstracta Figura
 class Figura(ABC):
     def __init__(self, color: str):
         self.color = color
@@ -30,7 +28,6 @@ class Figura(ABC):
     def perimetro(self) -> float:
         pass
 
-# Clase Cuadrado que implementa Coloreado
 class Cuadrado(Figura, Coloreado):
     def __init__(self, lado: float, color: str):
         super().__init__(color)
@@ -48,7 +45,6 @@ class Cuadrado(Figura, Coloreado):
     def __str__(self) -> str:
         return f"Cuadrado(color={self.color}, lado={self.lado})"
 
-# Clase Circulo
 class Circulo(Figura):
     def __init__(self, radio: float, color: str):
         super().__init__(color)
@@ -63,7 +59,6 @@ class Circulo(Figura):
     def __str__(self) -> str:
         return f"Circulo(color={self.color}, radio={self.radio})"
 
-# Crear lista de figuras aleatorias
 def crear_figuras():
     figuras = []
     colores = ['rojo', 'azul', 'verde', 'amarillo', 'negro']
@@ -83,7 +78,6 @@ def crear_figuras():
     
     return figuras
 
-# Mostrar la información de cada figura
 def mostrar_info_figuras(figuras):
     for figura in figuras:
         print(figura)
@@ -94,7 +88,7 @@ def mostrar_info_figuras(figuras):
             print("Coloración:", figura.como_colorear())
         print('-' * 40)
 
-# Programa principal
 if __name__ == "__main__":
     figuras = crear_figuras()
     mostrar_info_figuras(figuras)
+
