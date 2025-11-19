@@ -17,7 +17,7 @@ class EcuacionLineal:
         return (self.__a * self.__f - self.__e * self.__c) / (self.__a * self.__d - self.__b * self.__c)
 
 
-# Programa principal
+# Programa principal ratones
 a, b, c, d, e, f = map(float, input("Ingrese a, b, c, d, e, f: ").split())
 ecuacion = EcuacionLineal(a, b, c, d, e, f)
 
@@ -25,4 +25,5 @@ if ecuacion.tieneSolucion():
     print(f"x = {ecuacion.getX()}, y = {ecuacion.getY()}")
 else:
     print("La ecuación no tiene solución")
+
 
